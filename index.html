@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>FinaPoints</title>
+    <link rel="stylesheet" href="finaPoints.css" />
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="fina point, calculator, swimming">
+  </head>
+
+  <body>
+    <h1>FinaPoints</h1>
+
+    <form id="form" onsubmit="return false">
+      <div>
+        <p>
+          <label><input type="radio" name="gender" value="M" checked />Male</label>
+          <label><input type="radio" name="gender" value="F" />Female</label>
+        </p>
+        <p>
+          <label><input type="radio" name="course" value="LCM" checked />Long&nbsp;Course</label>
+          <label><input type="radio" name="course" value="SCM" />Short&nbsp;Course</label>
+        </p>
+        <p>
+          <select name="distance">
+            <option value="50">50m</option>
+            <option value="100">100m</option>
+            <option value="200">200m</option>
+            <option value="400">400m</option>
+            <option value="800">800m</option>
+            <option value="1500">1500m</option>
+            <option value="4x50">4 x 50m</option>
+            <option value="4x100">4 x 100m</option>
+            <option value="4x200">4 x 200m</option>
+          </select>
+          <select name="stroke">
+            <option value="BACK">Backstroke</option>
+            <option value="BREAST">Breaststroke</option>
+            <option value="FLY">Butterfly</option>
+            <option value="FREE">Freestyle</option>
+            <option value="MEDLEY">Medley</option>
+          </select>
+        </p>
+        <p>
+          <input type="radio" name="in" value="time" id="in_time" checked /><label for="in_time">Time:</label>
+          <input type="number" name="min" id="min" min="0" max="99" size="2" placeholder="0" maxlength="2">&nbsp;:
+          <input type="number" name="sec" id="sec" min="0" max="59" size="2" placeholder="00" maxlength="2">&nbsp;.
+          <input type="number" name="hun" id="hun" min="0" max="99" size="2" placeholder="00" maxlength="2">
+        </p>
+        <p>
+          <input type="radio" name="in" value="points" id="in_points" /><label for="in_points">Points:</label>
+          <input type="number" name="points" id="points" min="1" max="1100" min="0" size="4" disabled />
+        </p>
+      </div>
+    </form>
+    <p>Updated with Points Table 2015 for short course</p>
+    <p>More on FINA poits <a href="http://www.fina.org/content/fina-points">here</a></p>
+    <p class="attr">Made by <a href="http://www.linkedin.com/in/hojholt">Frederik Andersen</a></p>
+    <script src="baseTimes.js"></script>
+    <script src="finaPoints.js"></script>
+  </body>
+</html>
